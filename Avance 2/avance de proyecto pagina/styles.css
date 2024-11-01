@@ -1,0 +1,410 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Estilos del Encabezado */
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #2d3e50;
+    color: #fff;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+header p {
+    font-size: 1.2rem;
+}
+
+/* Estilos del Menú de Navegación */
+.navbar {
+    background-color: #2d3e50;
+    padding: 1rem;
+}
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.nav-item {
+    position: relative;
+}
+.nav-item a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem;
+    transition: color 0.3s;
+}
+.nav-item a:hover {
+    color: #1c9e8c;
+}
+
+/* Estilos del Submenú */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1c2b3a;
+    border-radius: 8px;
+    list-style: none;
+    padding: 0.5rem;
+    min-width: 150px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.dropdown li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+    display: block;
+    transition: background-color 0.3s;
+}
+.dropdown li a:hover {
+    background-color: #1c9e8c;
+    color: #fff;
+}
+.nav-item:hover .dropdown {
+    display: block;
+}
+
+/* Estilos de la Sección de Camiones */
+section {
+    margin: 2rem 0;
+}
+section h2 {
+    font-size: 1.8rem;
+    color: #2d3e50;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+.truck-image {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+}
+.truck-card {
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+.truck-card h3 {
+    color: #1c9e8c;
+}
+.truck-card p {
+    margin: 0.5rem 0;
+}
+
+/* Estilos del Formulario de Contacto */
+.contact-form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.contact-form h2 {
+    color: #2d3e50;
+}
+.contact-form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+.contact-form button {
+    background-color: #1c9e8c;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+.contact-form button:hover {
+    background-color: #138d75;
+}
+
+/* Panel Flotante de Ayuda */
+.help-panel {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2d3e50;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    font-size: 1rem;
+    text-align: center;
+    z-index: 1000;
+}
+.help-panel:hover {
+    background-color: #1c2b3a;
+    transform: scale(1.05);
+}
+
+/* Estilos del Modal */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Estilos para los botones de acordeón */
+.accordion {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.accordion.active,
+.accordion:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el contenido de los paneles */
+.panel-content {
+    display: none;
+    padding: 0 18px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/*Estilo de las imagenes para agrandar */
+.truck-image {
+    width: 70%;
+    height: auto;
+    transition: transform 0.3s ease; /* transicion suave para el efecto de la imagen  */
+    cursor: pointer; /* cambia la imagen al pasar el cursor */
+}
+
+/*efecto para agrandar la imagen*/
+.truck-image:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al 105% */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra para resaltar */
+}
+
+
+/* Estilos para el formulario de inicio de sesión */
+#loginForm {
+    display: none; /* Mantener oculto inicialmente */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    max-width: 90%;
+    z-index: 1000; /* Asegura que se vea sobre otros elementos */
+}
+
+#loginForm h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+#loginForm label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+#loginForm input[type="email"],
+#loginForm input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#loginForm button {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#loginForm button:hover {
+    background-color: #45a049;
+}
+
+#loginForm button:nth-of-type(2) {
+    background-color: #f44336; /* Botón de cerrar */
+    margin-top: 10px;
+}
+
+#loginForm button:nth-of-type(2):hover {
+    background-color: #e53935;
+}
+
+
+#loginForm p {
+    text-align: center;
+    font-size: 0.9em;
+    color: #333;
+    margin-top: 15px;
+}
+
+#loginForm a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+#loginForm a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el botón de iniciar sesión */
+.btn-login {
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    margin: 20px 0; /* Margen superior e inferior */
+}
+
+.btn-login:hover {
+    background-color: #45a049; /* Color de fondo al pasar el mouse */
+}
+
+
+/* Estilo adicional para colocar el botón en la esquina superior derecha */
+.btn-login {
+    position: absolute; /* Hace que el botón se posicione respecto al contenedor más cercano que no esté estático */
+    top: 20px; /* Distancia desde la parte superior */
+    right: 20px; /* Distancia desde la derecha */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #007BFF; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+.btn-login:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilo para el formulario de inicio de sesión y registro */
+.form-container {
+    background-color: #f8f9fa; /* Color de fondo */
+    border: 1px solid #ced4da; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    max-width: 400px; /* Ancho máximo */
+    margin: 20px auto; /* Centrado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.form-container h2 {
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+
+.form-container label {
+    display: block; /* Hace que las etiquetas ocupen toda la línea */
+    margin-bottom: 5px; /* Espaciado inferior */
+}
+
+.form-container input {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 15px; /* Espaciado inferior */
+    border: 1px solid #ced4da; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.form-container button {
+    padding: 10px; /* Espaciado interno */
+    background-color: #28a745; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+.form-container button:hover {
+    background-color: #218838; /* Color de fondo al pasar el mouse */
+}

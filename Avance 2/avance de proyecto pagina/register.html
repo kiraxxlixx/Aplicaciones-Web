@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Cuenta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="register-container">
+        <h2>Crear una Cuenta</h2>
+        <form action="login.html" method="get"> <!-- Redirige a login.html tras el registro -->
+            <label for="new-email">Correo Electrónico:</label>
+            <input type="email" id="new-email" name="new-email" required>
+            
+            <label for="new-password">Contraseña:</label>
+            <input type="password" id="new-password" name="new-password" required>
+            
+            <button type="submit">Registrar</button>
+        </form>
+        <p>¿Ya tienes cuenta? <a href="login.html">Iniciar sesión</a></p>
+    </div>
+
+</body>
+</html>
